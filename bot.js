@@ -1,13 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const bot_token = 'Nzg0NDc3MDA5MTc4NjU2NzY4.X8p3JQ.478lkGvBvbVQ_5e5_avVv_bYa58'
+const bot_token = ''
 
 client.login(bot_token);
 
 client.on('ready', readyDiscord);
 client.on('message', checkMessage);
 
-let triggerCommands = [
+let triggerStringsCommands = [
     'CU',
     'NATALINA',
     'VALEU NATALINA',
@@ -21,15 +21,14 @@ let triggerCommands = [
 ];
 
 function checkMessage(msg) {
-    console.log(`checking: ${msg.content}`);
+    console.log(`message: ${msg.content}'`);
 
-    if (triggerCommands.includes((msg.content).toUpperCase())) {
-        msg.reply('Boas festas! HO HO HO 🎅🎅🎅');
+    if (triggerStringsCommands.includes((msg.content).toUpperCase())) {
+        msg.reply('HO HO HO 🎅🎅🎅');
         msg.react('🎅');
     }
 
-    if (msg.content == 'minha foto') {
-        // Send the user's avatar URL
+    if (msg.content === 'minha foto') {
         msg.channel.send(msg.author.displayAvatarURL());
     }
 
@@ -39,17 +38,6 @@ function checkMessage(msg) {
 
     if (msg.content == 'da uma sugada') {
         msg.channel.send('GLUB GLUB');
-    }
-
-    if (msg.content == '!natau') {
-        msg.react('🆗');
-        msg.react('💯');
-        msg.react('🥕');
-        msg.react('🥒');
-        msg.react('🍌');
-        msg.react('🌚');
-        msg.react('🍆');
-        msg.reply(' Pega no meu pau! HO HO HO 🎅🎅🎅')
     }
 }
 
