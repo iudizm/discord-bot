@@ -1,1 +1,0 @@
-const bot_token = 'Nzg0NDc3MDA5MTc4NjU2NzY4.X8p3JQ.478lkGvBvbVQ_5e5_avVv_bYa58'

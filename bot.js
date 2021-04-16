@@ -1,8 +1,10 @@
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const bot_token = ''
 
-client.login(bot_token);
+require('dotenv').config();
+
+client.login(process.env.API_TOKEN);
 
 client.on('ready', readyDiscord);
 client.on('message', checkMessage);
