@@ -26,7 +26,7 @@ function checkMessage(msg) {
     console.log(`message: ${msg.content}'`);
 
     if (triggerStringsCommands.includes((msg.content).toUpperCase())) {
-        msg.reply('HO HO HO 🎅🎅🎅');
+        msg.channel.send('HO HO HO 🎅🎅🎅');
         msg.react('🎅');
     }
 
