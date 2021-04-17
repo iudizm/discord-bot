@@ -57,18 +57,18 @@ async function messageHandler(message) {
     }
 
     if ((message.content).toLowerCase() === "?nick") {
-        message.react('👌🦈')
+        message.react('👌🦈');
         const i = Math.floor(Math.random() * randomlyGeneratedNicknames.length);
         message.channel.send(randomlyGeneratedNicknames[i])
     }
 
     if ((message.content).toLowerCase() === '?foto') {
-        message.react('👌🦈')
+        message.react('👌🦈');
         message.channel.send(message.author.displayAvatarURL());
     }
 
     if ((message.content).toLowerCase() === '?gif') {
-        message.react('👌🦈')
+        message.react('👌🦈');
         let tenorApiUrl = `https://g.tenor.com/v1/search?q=excited&key=${process.env.TENOR_API_TOKEN}&limit=8`;
         let response = await fetch(tenorApiUrl);
         let json = await response.json();
