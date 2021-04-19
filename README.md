@@ -1,6 +1,6 @@
 # Bot para o Discord 🤖 
 
-# Sobre
+## Sobre
 Responde a comandos enviados em canais de texto do servidor.
 Interage com todos os canais de texto.
 
