@@ -1,13 +1,17 @@
-## Bot para o Discord 🤖 
-- <strong> Bot para o Discord</strong>, responde aos comandos no chat com uma mensagem amigável.
-- Interage com todos os canais do servidor.
+# Bot para o Discord 🤖 
 
-## Dependências
-- Node
+# Sobre
+Responde a comandos enviados em canais de texto do servidor.
+Interage com todos os canais de texto.
 
 ## Para iniciar o bot
-- dentro do diretório `/papai-noel-bot` rode no terminal `node bot.js`
+No diretório `/papai-noel-bot`:
+  - `npm update`
+  - `node src/bot.js`
 
-## ID de convite
-- [Clique aqui para convidar o bot para o seu servidor.](https://discord.com/api/oauth2/authorize?client_id=784477009178656768&permissions=0&scope=bot)
+## Dependências
+  - Node
 
+## Adicione ao seu servidor
+
+[Clique aqui para convidar o bot para o seu servidor.](https://discord.com/api/oauth2/authorize?client_id=784477009178656768&permissions=0&scope=bot)
