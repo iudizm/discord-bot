@@ -4,15 +4,6 @@ require('dotenv').config();
 module.exports = async function (message) {
     console.log(`message: ${message.content}'`);
     let messageParts = message.content.split(' ');
-    if (trigger_words.includes((messageParts[0]).toUpperCase())) {
-        message.channel.send('opa!');
-        message.react('🎅');
-    }
-    if ((messageParts[0]).toLowerCase() === "?nick") {
-        message.react('👌');
-        const i = Math.floor(Math.random() * randomlyGeneratedNicknames.length);
-        message.channel.send(randomlyGeneratedNicknames[i])
-    }
     if ((messageParts[0]).toLowerCase() === '?foto') {
         message.react('👌');
         message.channel.send(message.author.displayAvatarURL());
@@ -30,25 +21,3 @@ module.exports = async function (message) {
         message.channel.send("gif?" + json.results[i].url)
     }
 }
-
-let trigger_words = [
-    'NATAL',
-    'PAPAI NOEL',
-    'OI',
-    "BOT"
-];
-
-let randomlyGeneratedNicknames = [
-    'QuarrelsomeChico', 'TruculentJosie',
-    'YappyIce', 'SuccinctGreyhound',
-    'WiryClangJittery', 'SnuffleNebulous',
-    'DirtMereVincent', 'LyricalAngel',
-    'WarlikeWhip', 'SpiffyElla',
-    'ElasticFrankel', 'ZestyAutumn',
-    'SpuriousGoldie', 'WrathfulHiss',
-    'EarsplittingRails', 'CallousSulphur',
-    'WakefulTrucker', 'KeenMillie',
-    'FearlessSpark', 'LushQueball',
-    'TediousRails', 'TriteVarenne',
-    'JudiciousSplatter'
-]
